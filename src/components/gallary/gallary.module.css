@@ -1,0 +1,25 @@
+.gallary {
+  width: 100vw;
+}
+.gallaryGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+}
+.gallaryGrid img {
+  width: 100%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+.imgContainer {
+  position: relative;
+}
+.imgContainer ul {
+  overflow-x: hidden;
+  position: absolute;
+  width: 100%;
+  background-color: red;
+}
+.imgContainer ul li h3 {
+  transition: 0.4s;
+}

@@ -1,0 +1,90 @@
+.nav {
+  width: 100vw;
+  min-width: 120rem;
+  height: 8rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+  color: #000;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+.fadeBack {
+  border-radius: 100%;
+  height: 35px;
+  width: 35px;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px 20px #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.nav h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  z-index: 3;
+}
+.nav button {
+  background-color: #fff;
+  border-radius: 100%;
+  width: 3.4rem;
+  height: 3.4rem;
+  border: 2px solid #000;
+  cursor: pointer;
+  z-index: 5;
+}
+.nav button span {
+  display: block;
+  background-color: #fff;
+  border-radius: 100%;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid #000;
+  transition: 0.3s;
+  margin: 0 auto;
+}
+.nav button span:hover {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.navContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  width: 100vw;
+  background-color: #fff;
+  padding: 18rem 6rem 8rem 6rem;
+}
+
+.navContainer ul {
+  max-width: 720rem;
+  overflow: hidden;
+}
+.navContainer ul li h3 {
+  font-size: 3.4rem;
+  font-weight: 400;
+  letter-spacing: 1.7px;
+  text-transform: capitalize;
+  font-family: "poppins";
+  position: relative;
+  margin-bottom: 1rem;
+  margin-left: 3rem;
+  transition: 0.4s;
+}
+
+.navContainer ul li:nth-child(3) h3::after {
+  left: 13%;
+}
+.navContainer ul li:nth-child(4) h3::after {
+  left: 7%;
+}
+.navContainer ul li:nth-child(5) h3::after {
+  left: 12%;
+}
+
+/* margin 3  left -26.5% */
+/* margin 40  left 36% */

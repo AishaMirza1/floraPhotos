@@ -1,0 +1,22 @@
+html {
+  font-size: 62.5%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  overflow-x: hidden;
+}
+ul,
+ol {
+  list-style: none;
+}
+a:link,
+a:visited,
+a {
+  color: #000;
+  text-decoration: none;
+}

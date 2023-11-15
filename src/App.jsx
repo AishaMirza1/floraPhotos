@@ -1,4 +1,5 @@
 import "./App.css";
+import Navbar from "./components/navbar/Navbar.jsx";
 import Home from "./pages/Home";
 import Stories from "./pages/Stories";
 import Story from "./pages/Story";
@@ -7,6 +8,7 @@ function App() {
   return (
     <>
       <HashRouter>
+        <Navbar />
         <Routes>
           <Route index element={<Home />} />
           <Route path="stories" element={<Stories />} />
