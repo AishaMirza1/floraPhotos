@@ -7,6 +7,12 @@
   display: block;
   position: absolute;
 }
+.relativContainer {
+  position: relative;
+}
+.absolutePosition {
+  position: absolute;
+}
 .line::after {
   width: 100%;
   top: 50%;
@@ -21,6 +27,9 @@
 .lineHoverAnimation:hover h3 {
   transform: translateX(44rem);
 }
+.lineHoverAnimationImgOverlay:hover h3 {
+  transform: translateX(21rem);
+}
 
 .primarySectionHeader {
   font-size: 20rem;
@@ -30,4 +39,11 @@
   margin-bottom: 4rem;
   font-family: "Nunito Sans", sans-serif;
   font-family: "Poppins", sans-serif;
+  color: #000;
+}
+.rightText {
+  text-align: right;
+}
+.leftText {
+  text-align: left;
 }

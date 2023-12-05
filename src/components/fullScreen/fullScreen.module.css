@@ -1,0 +1,55 @@
+.fullScreen {
+  position: sticky;
+  background-color: rgb(30, 29, 29);
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  z-index: 999999990000;
+}
+
+.fullScreen li {
+  position: relative;
+  padding: 3rem 2rem;
+  z-index: 99999;
+}
+.fullScreenContainer {
+  align-items: center;
+}
+.fullScreen .fullScreenContainer img {
+  width: 80vw;
+  height: 90vh;
+  z-index: 0;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+.fullScreen h3 {
+  cursor: pointer;
+  color: #fff;
+  font-size: 2.5rem;
+  transition: 1s;
+}
+.fullScreen li h3::after,
+.fullScreen li h3::before {
+  background-color: #fff;
+}
+
+.fullScreen li h3 {
+  transform: translateX(22px);
+}
+.fullScreen li:hover h3 {
+  transform: translateX(30rem);
+}
+.fullScreen li h3::after {
+  top: 60% !important;
+  left: 9%;
+}
+
+/*  for 922px 
+.fullScreen li h3 {
+  transform: translateX(20px);
+}
+.fullScreen li:hover h3 {
+  transform: translateX(25rem);
+} */

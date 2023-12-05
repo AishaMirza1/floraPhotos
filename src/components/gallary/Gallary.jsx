@@ -1,37 +1,54 @@
 import styles from "./gallary.module.css";
 import { HashLink } from "react-router-hash-link";
 import utilClasses from "../../assets/utilstyles/utilClasses.module.css";
-import utilStyles from "../../assets/utilstyles/utilClasses.module.css";
+import Story from "./Story";
+
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
+import { storyData } from "../../storyData";
+import FullScreen from "../fullScreen/FullScreen";
+import { useEffect, useState } from "react";
 export default function Gallary() {
+  const [fullScreen, setFullScreen] = useState(false);
+  const [selectedImgId, setSelectedImgId] = useState(0);
+
+  useEffect(() => {
+    fullScreen ? disableBodyScroll(document) : enableBodyScroll(document);
+  }, [fullScreen]);
   return (
-    <section id="gallary" className={styles.gallary}>
-      <h3 className={utilStyles.primarySectionHeader}>Gallary</h3>
-      <div className={styles.gallaryGrid}>
-        <div className={styles.imgContainer}>
-          <ul>
-            <li className={utilClasses.lineHoverAnimation}>
+    <>
+      {fullScreen ? (
+        <FullScreen
+          setFullScreen={setFullScreen}
+          selectedImgId={selectedImgId}
+        />
+      ) : (
+        <section id="gallary" className={styles.gallary}>
+          <h3 className={utilClasses.primarySectionHeader}>Gallary</h3>
+          <div className={styles.gallaryGrid}>
+            {storyData.map((story) => {
+              return (
+                <Story
+                  story={story}
+                  key={story.id}
+                  id={story.id}
+                  setFullScreen={setFullScreen}
+                  setSelectedImgId={setSelectedImgId}
+                />
+              );
+            })}
+          </div>
+
+          <div className={utilClasses.margin}>
+            <div
+              className={`${utilClasses.relativContainer} ${utilClasses.lineHoverAnimation} ${styles.storyPageLink}`}
+            >
               <HashLink to="/#gallary">
-                <h3 className={utilClasses.line}>FullScreen</h3>
+                <h3 className={utilClasses.line}>Find The Stories</h3>
               </HashLink>
-            </li>
-            <li className={utilClasses.lineHoverAnimation}>
-              <HashLink to="/#gallary">
-                <h3 className={utilClasses.line}>Visit Story</h3>
-              </HashLink>
-            </li>
-          </ul>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNBLOA0GujGJgQuWXDxiR4wsC6BYXsPr1lHw&usqp=CAU" />
-        </div>
-        <div>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNBLOA0GujGJgQuWXDxiR4wsC6BYXsPr1lHw&usqp=CAU" />
-        </div>
-        <div>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNBLOA0GujGJgQuWXDxiR4wsC6BYXsPr1lHw&usqp=CAUU" />
-        </div>
-        <div>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNBLOA0GujGJgQuWXDxiR4wsC6BYXsPr1lHw&usqp=CAU" />
-        </div>
-      </div>
-    </section>
+            </div>
+          </div>
+        </section>
+      )}
+    </>
   );
 }
