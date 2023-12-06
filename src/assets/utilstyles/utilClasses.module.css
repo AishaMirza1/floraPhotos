@@ -24,8 +24,18 @@
   top: 50%;
   left: -35.5%;
 }
+
 .lineHoverAnimation:hover h3 {
   transform: translateX(44rem);
+}
+.heading2 {
+  font-size: 6.8rem;
+  text-transform: capitalize;
+  min-width: 120rem;
+  font-weight: 400;
+  color: #000;
+  transition: 0.4s;
+  letter-spacing: 1.2px;
 }
 .lineHoverAnimationImgOverlay:hover h3 {
   transform: translateX(21rem);

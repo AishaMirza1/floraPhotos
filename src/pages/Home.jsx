@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import Gallary from "../components/gallary/Gallary";
 import Contact from "../components/contact/Contact";
+import Footer from "../components/footer/Footer";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -17,6 +18,7 @@ export default function Home() {
       </p>
       <Gallary />
       <Contact />
+      <Footer />
     </>
   );
 }

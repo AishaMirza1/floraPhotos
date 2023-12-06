@@ -1,0 +1,35 @@
+.footer {
+  border-top: 2px solid rgba(19, 19, 19, 0.91);
+  padding: 5rem 0;
+}
+.footer ul li h3 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  letter-spacing: 1.7px;
+  text-transform: capitalize;
+  font-family: "poppins";
+  position: relative;
+  transition: 0.4s;
+  transform: translateX(2rem);
+}
+.footer ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.footer ul li {
+  overflow-x: hidden;
+}
+
+.footer ul li h3:after {
+  left: 38%;
+}
+.footer ul li:nth-child(2) h3:after {
+  left: 48%;
+}
+.footer ul li h3::before {
+  width: 50%;
+  left: -50.5% !important;
+}
+.lineHoverAnimation:hover h3 {
+  transform: translateX(30rem);
+}

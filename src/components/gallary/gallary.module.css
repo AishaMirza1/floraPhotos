@@ -53,6 +53,7 @@
 }
 .storyPageLink h3 {
   transition: 0.4s;
+  font-weight: 400;
   font-size: 3rem;
 }
 .storyPageLink h3::after {
