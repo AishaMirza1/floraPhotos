@@ -35,17 +35,16 @@
   font-weight: 400;
   color: #000;
   transition: 0.4s;
-  letter-spacing: 1.2px;
+  letter-spacing: 1px;
 }
 .lineHoverAnimationImgOverlay:hover h3 {
   transform: translateX(21rem);
 }
 
 .primarySectionHeader {
-  font-size: 20rem;
+  font-size: 10rem;
   font-weight: 400;
-  letter-spacing: 1.5rem;
-  text-align: center;
+  letter-spacing: 0.7px;
   margin-bottom: 4rem;
   font-family: "Nunito Sans", sans-serif;
   font-family: "Poppins", sans-serif;

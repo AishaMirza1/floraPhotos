@@ -23,7 +23,11 @@ export default function Gallary() {
         />
       ) : (
         <section id="gallary" className={styles.gallary}>
-          <h3 className={utilClasses.primarySectionHeader}>Gallary</h3>
+          <h3
+            className={`${utilClasses.primarySectionHeader} ${styles.galleryHeader}`}
+          >
+            Gallary
+          </h3>
           <div className={styles.gallaryGrid}>
             {storyData.map((story) => {
               return (

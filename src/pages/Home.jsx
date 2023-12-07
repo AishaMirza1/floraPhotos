@@ -2,7 +2,8 @@ import { useNavigate } from "react-router-dom";
 import Gallary from "../components/gallary/Gallary";
 import Contact from "../components/contact/Contact";
 import Footer from "../components/footer/Footer";
-
+import About from "../components/About/About";
+import MyGear from "../components/mygear/MyGear";
 export default function Home() {
   const navigate = useNavigate();
 
@@ -17,6 +18,8 @@ export default function Home() {
         stories
       </p>
       <Gallary />
+      <About />
+      <MyGear />
       <Contact />
       <Footer />
     </>
