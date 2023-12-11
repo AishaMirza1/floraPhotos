@@ -7,6 +7,7 @@ import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import { storyData } from "../../storyData";
 import FullScreen from "../fullScreen/FullScreen";
 import { useEffect, useState } from "react";
+import OnScrollRevealAnimation from "../../assets/utilstyles/OnScrollRevealAnimation";
 export default function Gallary() {
   const [fullScreen, setFullScreen] = useState(false);
   const [selectedImgId, setSelectedImgId] = useState(0);
@@ -23,11 +24,14 @@ export default function Gallary() {
         />
       ) : (
         <section id="gallary" className={styles.gallary}>
-          <h3
-            className={`${utilClasses.primarySectionHeader} ${styles.galleryHeader}`}
-          >
-            Gallary
-          </h3>
+          <OnScrollRevealAnimation>
+            <h3
+              className={`${utilClasses.primarySectionHeader} ${styles.galleryHeader}`}
+            >
+              Gallary
+            </h3>
+          </OnScrollRevealAnimation>
+
           <div className={styles.gallaryGrid}>
             {storyData.map((story) => {
               return (

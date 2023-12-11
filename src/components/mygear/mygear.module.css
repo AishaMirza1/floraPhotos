@@ -11,9 +11,9 @@
   background: #000;
   display: block;
   position: absolute;
-  width: 60%;
+  width: 50%;
   top: 50%;
-  left: 30%;
+  left: 43%;
 }
 .myGearData {
   display: grid;

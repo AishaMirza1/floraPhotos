@@ -1,0 +1,91 @@
+.header {
+  height: 100vh;
+  background-image: url("https://www.pixel4k.com/wp-content/uploads/2018/10/starry-night-sky-evening-blue-landscape-4k_1540144784.jpg");
+  object-fit: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: -8rem;
+  margin-bottom: 14rem;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.header div {
+  height: 100%;
+  border-right: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.header p {
+  font-size: 8rem;
+
+  font-weight: 500;
+  color: #fff;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.exploreTagContainer {
+  position: relative;
+  overflow-y: hidden;
+  overflow: hidden;
+}
+.exploreTagContainer div {
+  margin-top: 5rem;
+  display: inline-block;
+  border: none;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 55%;
+  height: 37rem;
+  overflow: hidden;
+}
+.exploreTagContainer div::after,
+.exploreTagContainer div::before {
+  content: " ";
+  height: 100%;
+  background: #ffffff;
+  display: block;
+  position: absolute;
+  width: 3px;
+}
+
+.exploreTagContainer div::after {
+  top: -75%;
+}
+.exploreTagContainer div::before {
+  top: 75%;
+}
+.exploreTagContainer div:hover span {
+  transform: translateY(-8rem);
+}
+.exploreHover::after,
+.exploreHover::before,
+.exploreHover span {
+  transition: 0.2s;
+}
+
+.exploreHover:hover::after {
+  top: -95%;
+}
+.exploreHover:hover::before {
+  top: 53%;
+}
+.exploreTagContainer span {
+  font-size: 2rem;
+  letter-spacing: 0.12em;
+  line-height: 1.2em;
+  color: #fff;
+  margin-bottom: 0.2rem;
+}
+
+/* .header .pannelHover::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #ede9e936;
+  transition: 0.6s;
+} */
