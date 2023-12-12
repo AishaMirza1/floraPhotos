@@ -61,6 +61,12 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: #ede9e936;
+
   transition: 0.6s;
+}
+.homePannelColor {
+  background-color: #ede9e936;
+}
+.storyPannelColor {
+  background-color: #0000009a;
 }

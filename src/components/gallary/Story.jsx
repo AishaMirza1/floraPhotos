@@ -1,11 +1,10 @@
 import { motion, AnimatePresence } from "framer-motion";
 import utilClasses from "../../assets/utilstyles/utilClasses.module.css";
-
-import { HashLink } from "react-router-hash-link";
 import styles from "./gallary.module.css";
 import { useState } from "react";
 import PropTypes from "prop-types";
 import ScrollIntoView from "react-scroll-into-view";
+import { Link } from "react-router-dom";
 export default function Story({ story, id, setFullScreen, setSelectedImgId }) {
   const [moveOverlay, setMoveOverlay] = useState(false);
   const isEven = id % 2 === 0 ? true : false;
@@ -64,9 +63,9 @@ export default function Story({ story, id, setFullScreen, setSelectedImgId }) {
                 </ScrollIntoView>
 
                 <li className={utilClasses.lineHoverAnimationImgOverlay}>
-                  <HashLink to="/#gallary">
+                  <Link to={`stories/story/${id}`}>
                     <h3 className={utilClasses.line}>Visit Story</h3>
-                  </HashLink>
+                  </Link>
                 </li>
               </motion.ul>
             </AnimatePresence>

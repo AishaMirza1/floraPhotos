@@ -1,9 +1,10 @@
 import { motion, useAnimation } from "framer-motion";
 import styles from "./utilClasses.module.css";
 import { useEffect, useRef, useState } from "react";
-
-export default function PannenHover() {
+import PropTypes from "prop-types";
+export default function PannenHover({ isStory }) {
   const ref = useRef(null);
+
   const mainControls = useAnimation();
   const [isHovered, setIsHovered] = useState(false);
   useEffect(() => {
@@ -14,7 +15,11 @@ export default function PannenHover() {
   return (
     <motion.span
       ref={ref}
-      className={styles.pannelHover}
+      className={
+        isStory
+          ? `${styles.pannelHover} ${styles.storyPannelColor}`
+          : `${styles.pannelHover} ${styles.homePannelColor}`
+      }
       onMouseEnter={() => {
         setIsHovered(true);
       }}
@@ -26,3 +31,6 @@ export default function PannenHover() {
     ></motion.span>
   );
 }
+PannenHover.propTypes = {
+  isStory: PropTypes.bool,
+};

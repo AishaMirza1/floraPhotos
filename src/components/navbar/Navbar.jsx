@@ -3,12 +3,15 @@ import styles from "./navbar.module.css";
 import { useState } from "react";
 import utilClasses from "../../assets/utilstyles/utilClasses.module.css";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 export default function Navbar() {
   const [showMobileNav, setMobileNav] = useState(false);
   return (
     <nav className={styles.nav}>
       <div className={styles.fadeBack}>
-        <h1>Flora</h1>
+        <Link to="/">
+          <h1>Flora</h1>
+        </Link>
       </div>
       <div className={styles.fadeBack}>
         <button onClick={() => setMobileNav(!showMobileNav)}>

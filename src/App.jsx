@@ -1,4 +1,5 @@
 import "./App.css";
+import Footer from "./components/footer/Footer.jsx";
 import Navbar from "./components/navbar/Navbar.jsx";
 import Home from "./pages/Home";
 import Stories from "./pages/Stories";
@@ -12,8 +13,9 @@ function App() {
         <Routes>
           <Route index element={<Home />} />
           <Route path="stories" element={<Stories />} />
-          <Route path="stories/story" element={<Story />} />
+          <Route path={`stories/story/:id`} element={<Story />} />
         </Routes>
+        <Footer />
       </HashRouter>
     </>
   );

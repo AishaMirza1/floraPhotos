@@ -1,5 +1,5 @@
 import styles from "./gallary.module.css";
-import { HashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 import utilClasses from "../../assets/utilstyles/utilClasses.module.css";
 import Story from "./Story";
 
@@ -8,6 +8,7 @@ import { storyData } from "../../storyData";
 import FullScreen from "../fullScreen/FullScreen";
 import { useEffect, useState } from "react";
 import OnScrollRevealAnimation from "../../assets/utilstyles/OnScrollRevealAnimation";
+
 export default function Gallary() {
   const [fullScreen, setFullScreen] = useState(false);
   const [selectedImgId, setSelectedImgId] = useState(0);
@@ -50,9 +51,9 @@ export default function Gallary() {
             <div
               className={`${utilClasses.relativContainer} ${utilClasses.lineHoverAnimation} ${styles.storyPageLink}`}
             >
-              <HashLink to="/#gallary">
+              <Link to="/stories">
                 <h3 className={utilClasses.line}>Find The Stories</h3>
-              </HashLink>
+              </Link>
             </div>
           </div>
         </section>
