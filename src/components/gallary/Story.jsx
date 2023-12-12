@@ -25,7 +25,7 @@ export default function Story({ story, id, setFullScreen, setSelectedImgId }) {
             }
             variants={{
               initial: { translateX: 0 },
-              hover: { translateX: isEven ? -767 : 767 },
+              hover: { translateX: isEven ? "-100%" : "100%" },
             }}
             transition={{ duration: 0.5 }}
             animate={moveOverlay ? "hover" : "initial"}

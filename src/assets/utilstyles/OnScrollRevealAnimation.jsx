@@ -4,12 +4,12 @@ import { useEffect, useRef } from "react";
 export default function OnScrollRevealAnimation({ children }) {
   const mainControls = useAnimation();
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false });
+  const isInView = useInView(ref, { once: true });
   useEffect(() => {
     if (isInView) {
       mainControls.start("visible");
     }
-  }, [isInView]);
+  }, [isInView, mainControls]);
   return (
     <motion.div
       ref={ref}
