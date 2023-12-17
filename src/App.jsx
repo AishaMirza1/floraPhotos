@@ -1,4 +1,5 @@
 import "./App.css";
+import ScrollToTop from "./assets/utilstyles/ScrollToTop.jsx";
 import Footer from "./components/footer/Footer.jsx";
 import Navbar from "./components/navbar/Navbar.jsx";
 import Home from "./pages/Home";
@@ -9,12 +10,14 @@ function App() {
   return (
     <>
       <HashRouter>
-        <Navbar />
-        <Routes>
-          <Route index element={<Home />} />
-          <Route path="stories" element={<Stories />} />
-          <Route path={`stories/story/:id`} element={<Story />} />
-        </Routes>
+        <Navbar />{" "}
+        <ScrollToTop>
+          <Routes>
+            <Route index element={<Home />} />
+            <Route path="stories" element={<Stories />} />
+            <Route path={`stories/story/:id`} element={<Story />} />
+          </Routes>{" "}
+        </ScrollToTop>
         <Footer />
       </HashRouter>
     </>

@@ -8,13 +8,6 @@ export default function Home() {
   return (
     <>
       <Header headerName="harmony" />
-      {/* <p
-        style={{ height: "100vh" }}
-      
-      >
-        {" "}
-        stories
-      </p> */}
       <Gallary />
       <About />
       <MyGear />

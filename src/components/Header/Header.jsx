@@ -9,7 +9,7 @@ export default function Header({ headerName }) {
     <div
       className={
         isStoryPage
-          ? `${styles.header} ${styles.storyBackground}`
+          ? `${styles.header} ${styles.storyBackGround}`
           : `${styles.header} ${styles.homeBackGround}`
       }
     >
@@ -28,15 +28,19 @@ export default function Header({ headerName }) {
       <div className={`${styles.exploreTagContainer} ${styles.pannelHover}`}>
         <PannenHover isStory={isStoryPage} />
         <p>{characters[3]}</p>
-        <div className={styles.exploreHover}>
-          <span>e</span>
-          <span>x</span>
-          <span>p</span>
-          <span>l</span>
-          <span>o</span>
-          <span>r</span>
-          <span>e</span>
-        </div>
+        {isStoryPage === false ? (
+          <div className={styles.exploreHover}>
+            <span>e</span>
+            <span>x</span>
+            <span>p</span>
+            <span>l</span>
+            <span>o</span>
+            <span>r</span>
+            <span>e</span>
+          </div>
+        ) : (
+          <></>
+        )}
       </div>
       <div className={styles.pannelHover}>
         <PannenHover isStory={isStoryPage} />

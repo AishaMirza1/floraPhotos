@@ -1,10 +1,8 @@
 .header {
-  height: 100vh;
   object-fit: contain;
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: -8rem;
-  margin-bottom: 14rem;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
 }
@@ -19,26 +17,27 @@
 .header p {
   font-size: 12rem;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 400;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 .homeBackGround {
+  height: 100vh;
+  margin-bottom: 14rem;
   background-image: url("https://www.pixel4k.com/wp-content/uploads/2018/10/starry-night-sky-evening-blue-landscape-4k_1540144784.jpg");
 }
 .homeBackGround p {
   color: #fff;
 }
 .storyBackGround {
+  height: 70vh;
   background-image: none;
 }
 .storyBackGround p {
   color: #000;
   background-color: #fff;
 }
-.storyBackGround span {
-  background-color: #000000eb !important;
-}
+
 .exploreTagContainer {
   position: relative;
   overflow-y: hidden;

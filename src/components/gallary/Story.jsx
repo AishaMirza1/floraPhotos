@@ -36,7 +36,7 @@ export default function Story({ story, id, setFullScreen, setSelectedImgId }) {
                   isEven ? utilClasses.leftText : utilClasses.rightText
                 }
               >
-                {story.storyName}
+                {story?.storyName}
               </p>
             )}
           </motion.div>
@@ -69,7 +69,7 @@ export default function Story({ story, id, setFullScreen, setSelectedImgId }) {
                 </li>
               </motion.ul>
             </AnimatePresence>
-            <img src={`${story.src}`} id={story.id} />
+            <img src={`${story?.src}`} id={story?.id} />
           </motion.div>
         </div>
       </AnimatePresence>
@@ -77,8 +77,8 @@ export default function Story({ story, id, setFullScreen, setSelectedImgId }) {
   );
 }
 Story.propTypes = {
-  story: PropTypes.object.isRequired,
-  id: PropTypes.number.isRequired,
-  setFullScreen: PropTypes.func.isRequired,
+  story: PropTypes.object,
+  id: PropTypes.number,
+  setFullScreen: PropTypes.func,
   setSelectedImgId: PropTypes.func,
 };
