@@ -12,7 +12,7 @@ export default function StoryPageStoryComponent({ story }) {
           <div
             className={` ${utilClasses.lineHoverAnimation} ${styles.storyPageLink}`}
           >
-            <Link to="/stories">
+            <Link to={`/stories/story/${story.id}`}>
               <h3 className={utilClasses.line}>Full Story</h3>
             </Link>
           </div>

@@ -13,7 +13,7 @@
   position: absolute;
   width: 50%;
   top: 50%;
-  left: 48%;
+  left: 68rem;
 }
 .aboutData {
   display: grid;
@@ -34,4 +34,53 @@
 
   border-radius: 100%;
   border: 1.2px solid #000;
+}
+@media screen and (max-width: 1220px) {
+  .about h3::after {
+    left: 48rem;
+  }
+  .aboutData p {
+    font-size: 2rem;
+  }
+  .about img {
+    width: 29rem;
+    height: 29rem;
+  }
+}
+@media screen and (max-width: 985px) {
+  .about {
+    margin: 12rem 0 9rem 4rem;
+  }
+  .aboutData {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .about h3::after {
+    left: 40rem;
+  }
+  .about img {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 712px) {
+  .about h3::after {
+    left: 30rem;
+  }
+  .aboutData p {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 431px) {
+  .about {
+    margin: 12rem 2rem 9rem 2rem;
+  }
+  .about h3::after {
+    left: 20rem;
+  }
+  .aboutData p {
+    font-size: 1.5rem;
+    letter-spacing: 1.1px;
+    line-height: 20px;
+    margin-bottom: 1.8rem;
+  }
 }

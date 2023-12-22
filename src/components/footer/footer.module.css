@@ -1,6 +1,7 @@
 .footer {
   border-top: 2px solid rgba(19, 19, 19, 0.91);
   padding: 5rem 0;
+  height: 16rem;
 }
 .footer ul li h3 {
   font-size: 2.4rem;
@@ -21,10 +22,10 @@
 }
 
 .footer ul li h3:after {
-  left: 38%;
+  left: 28rem;
 }
 .footer ul li:nth-child(2) h3:after {
-  left: 48%;
+  left: 37rem;
 }
 .footer ul li h3::before {
   width: 50%;
@@ -32,4 +33,34 @@
 }
 .lineHoverAnimation:hover h3 {
   transform: translateX(30rem);
+}
+@media screen and (max-width: 875px) {
+  .footer ul li h3 {
+    font-size: 2rem;
+  }
+  .footer ul li h3:after {
+    left: 24rem;
+  }
+  .footer ul li:nth-child(2) h3:after {
+    left: 31rem;
+  }
+  .footer ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+@media screen and (max-width: 321px) {
+  .footer ul li h3 {
+    font-size: 1.6rem;
+  }
+  .lineHoverAnimation:hover h3 {
+    transform: translateX(13rem);
+  }
+  .footer ul li h3:after {
+    left: 20rem;
+  }
+  .footer ul li:nth-child(2) h3:after {
+    left: 25rem;
+  }
 }

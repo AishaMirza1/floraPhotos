@@ -1,7 +1,7 @@
 import "./App.css";
 import ScrollToTop from "./assets/utilstyles/ScrollToTop.jsx";
 import Footer from "./components/footer/Footer.jsx";
-import Navbar from "./components/navbar/Navbar.jsx";
+// import Navbar from "./components/navbar/Navbar.jsx";
 import Home from "./pages/Home";
 import Stories from "./pages/Stories";
 import Story from "./pages/Story";
@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <HashRouter>
-        <Navbar />{" "}
+        {/* <Navbar />{" "} */}
         <ScrollToTop>
           <Routes>
             <Route index element={<Home />} />

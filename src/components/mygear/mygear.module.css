@@ -13,7 +13,7 @@
   position: absolute;
   width: 50%;
   top: 50%;
-  left: 43%;
+  left: 60rem;
 }
 .myGearData {
   display: grid;
@@ -31,4 +31,52 @@
   border: 1.2px solid #000;
   border-radius: 100%;
   object-fit: contain;
+}
+@media screen and (max-width: 1220px) {
+  .myGear h3::after {
+    left: 45rem;
+  }
+}
+@media screen and (max-width: 985px) {
+  .myGear {
+    margin: 12rem 3rem 9rem 3rem;
+  }
+  .myGear h3::after {
+    left: 35rem;
+  }
+  .myGearData {
+    margin: 1.6rem 1rem;
+  }
+  .myGearData img {
+    width: 18rem;
+    height: 18rem;
+  }
+}
+@media screen and (max-width: 628px) {
+  .myGear h3::after {
+    left: 26rem;
+  }
+  .myGearData img {
+    width: 15rem;
+    height: 15rem;
+  }
+}
+@media screen and (max-width: 540px) {
+  .myGearData img {
+    width: 13rem;
+    height: 13rem;
+  }
+}
+@media screen and (max-width: 431px) {
+  .myGear {
+    margin: 12rem 2rem 9rem 2rem;
+  }
+  .myGearData img {
+    width: 12rem;
+    height: 12rem;
+  }
+  .myGearData p {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
 }

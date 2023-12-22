@@ -1,20 +1,20 @@
 .storyPageStoryComponent {
   position: relative;
   height: 40rem;
-  width: 100%;
+  width: 100vw;
   color: #fff;
+  overflow-y: hidden;
 }
 .storyPageStoryComponent img {
   height: 40rem;
   width: 100%;
-  background-size: contain;
   object-fit: cover;
 }
 .storyPageLink {
   display: inline-block;
   overflow-x: hidden;
-  margin: 1.5rem;
-  width: 125rem;
+  margin: 1.5rem 0rem 1.5rem 3rem;
+  width: 85vw;
 }
 .storyPageLink h3 {
   color: #fff;
@@ -28,12 +28,14 @@
   background-color: #fff;
 }
 .storyPageLink h3::after {
-  left: 8%;
+  left: 9.4rem;
+  width: 90%;
 }
 .storyData {
   position: absolute;
   z-index: 99999;
   top: 0;
+  margin-right: 1rem;
 }
 .storyData p {
   font-size: 2.6rem;
@@ -45,9 +47,86 @@
   font-size: 2rem;
 }
 .storyLinkContainer {
-  margin-top: 20%;
+  margin-top: 30rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+@media screen and (max-width: 890px) {
+  .storyPageLink {
+    width: 80vw;
+  }
+  .storyPageLink h3::after {
+    width: 85%;
+  }
+  .storyData span {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 780px) {
+  .storyPageLink {
+    width: 75vw;
+  }
+  .storyPageLink h3::after {
+    width: 80%;
+  }
+  .storyData span {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (min-width: 414px) and (max-width: 431px) {
+  .storyData p {
+    font-size: 1.8rem;
+  }
+  .storyLinkContainer {
+    margin-top: 27rem;
+  }
+}
+@media screen and (min-width: 376px) and (max-width: 415px) {
+  .storyData p {
+    font-size: 1.8rem;
+  }
+  .storyLinkContainer {
+    margin-top: 26rem;
+  }
+}
+@media screen and (max-width: 376px) {
+  .storyPageStoryComponent img {
+    height: 30rem;
+  }
+  .storyLinkContainer {
+    margin-top: 22rem;
+  }
+  .storyPageStoryComponent {
+    height: 30rem;
+  }
+  .storyPageLink h3 {
+    font-weight: 300;
+    font-size: 1.8rem;
+  }
+  .storyPageLink {
+    margin: 1.5rem 0 1.5rem 1.5rem;
+    width: 75vw;
+  }
+  .storyData p {
+    font-size: 1.8rem;
+  }
+  .storyPageLink h3::after {
+    left: 8rem;
+    width: 75%;
+  }
+  .storyData span {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .storyData p {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 280px) {
+  .storyData p {
+    font-size: 1.5rem;
+  }
 }

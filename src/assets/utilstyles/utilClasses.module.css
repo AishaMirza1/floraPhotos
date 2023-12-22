@@ -69,3 +69,23 @@
 .storyPannelColor {
   background-color: #00000087;
 }
+@media screen and (max-width: 1220px) {
+  .primarySectionHeader {
+    font-size: 10rem;
+  }
+}
+@media screen and (max-width: 986px) {
+  .primarySectionHeader {
+    font-size: 8rem;
+  }
+}
+@media screen and (max-width: 712px) {
+  .primarySectionHeader {
+    font-size: 6rem;
+  }
+}
+@media screen and (max-width: 431px) {
+  .primarySectionHeader {
+    font-size: 4rem;
+  }
+}
