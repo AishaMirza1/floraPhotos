@@ -13,47 +13,12 @@ export default function Header({ headerName }) {
           : `${styles.header} ${styles.homeBackGround}`
       }
     >
-      <div className={styles.pannelHover}>
-        <PannenHover isStory={isStoryPage} />
-        <p>{characters[0]}</p>
-      </div>
-      <div className={styles.pannelHover}>
-        <PannenHover isStory={isStoryPage} />
-        <p>{characters[1]}</p>
-      </div>
-      <div className={styles.pannelHover}>
-        <PannenHover isStory={isStoryPage} />
-        <p>{characters[2]}</p>
-      </div>
-      <div className={`${styles.exploreTagContainer} ${styles.pannelHover}`}>
-        <PannenHover isStory={isStoryPage} />
-        <p>{characters[3]}</p>
-        {isStoryPage === false ? (
-          <div className={styles.exploreHover}>
-            <span>e</span>
-            <span>x</span>
-            <span>p</span>
-            <span>l</span>
-            <span>o</span>
-            <span>r</span>
-            <span>e</span>
-          </div>
-        ) : (
-          <></>
-        )}
-      </div>
-      <div className={styles.pannelHover}>
-        <PannenHover isStory={isStoryPage} />
-        <p>{characters[4]}</p>
-      </div>
-      <div className={styles.pannelHover}>
-        <PannenHover isStory={isStoryPage} />
-        <p>{characters[5]}</p>
-      </div>
-      <div className={styles.pannelHover}>
-        <PannenHover isStory={isStoryPage} />
-        <p>{characters[6]}</p>
-      </div>
+      {characters.map((character) => (
+        <div className={styles.pannelHover} key={character}>
+          <PannenHover isStory={isStoryPage} />
+          <p>{character}</p>
+        </div>
+      ))}
     </div>
   );
 }

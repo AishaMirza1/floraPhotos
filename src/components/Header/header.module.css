@@ -16,6 +16,7 @@
   position: relative;
 }
 .header p {
+  margin: 16rem auto;
   font-size: 12rem;
   text-transform: uppercase;
   font-weight: 400;
@@ -39,61 +40,6 @@
   background-color: #fff;
 }
 
-.exploreTagContainer {
-  position: relative;
-  overflow-y: hidden;
-  overflow: hidden;
-}
-.exploreTagContainer div {
-  margin-top: 5rem;
-  display: inline-block;
-  border: none;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  top: 52%;
-  height: 37rem;
-  overflow: hidden;
-}
-.exploreTagContainer div::after,
-.exploreTagContainer div::before {
-  content: " ";
-  height: 100%;
-  background: #ffffff;
-  display: block;
-  position: absolute;
-  width: 3px;
-}
-
-.exploreTagContainer div::after {
-  top: -75%;
-}
-.exploreTagContainer div::before {
-  top: 75%;
-}
-.exploreTagContainer div:hover span {
-  transform: translateY(-8rem);
-}
-.exploreHover::after,
-.exploreHover::before,
-.exploreHover span {
-  transition: 0.2s;
-}
-
-.exploreHover:hover::after {
-  top: -95%;
-}
-.exploreHover:hover::before {
-  top: 53%;
-}
-.exploreTagContainer span {
-  font-size: 2rem;
-  letter-spacing: 0.12em;
-  line-height: 1.2em;
-  color: #fff;
-  margin-bottom: 0.2rem;
-}
-
 @media screen and (max-width: 541px) {
   .header p {
     font-size: 5rem;
@@ -106,7 +52,7 @@
   }
 }
 
-@media screen and (max-width: 415px) {
+@media screen and (max-width: 860px) {
   .header p {
     font-size: 7rem;
   }
@@ -117,14 +63,24 @@
     height: 100%;
   }
 }
-@media screen and (max-width: 321px) {
+@media screen and (max-width: 502px) {
   .header p {
     font-size: 6rem;
   }
 }
-@media screen and (max-width: 280px) {
+@media screen and (max-width: 321px) {
   .header p {
     font-size: 5rem;
+  }
+}
+@media screen and (max-width: 332px) {
+  .header p {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 280px) {
+  .header p {
+    font-size: 3rem;
   }
   .header {
     height: 30rem;

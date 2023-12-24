@@ -48,7 +48,7 @@
   background-color: #fff;
 }
 .imgContainer ul li h3::after {
-  left: 17%;
+  left: 12rem;
   background-color: #fff;
 }
 .storyPageLink {
@@ -61,7 +61,7 @@
   font-size: 2.5rem;
 }
 .storyPageLink h3::after {
-  left: 13%;
+  left: 19rem;
 }
 .story {
   position: relative;
@@ -88,4 +88,22 @@
 
 .gallaryContainer {
   position: relative;
+}
+
+@media screen and (max-width: 860px) {
+  .overlay p {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .gallaryGrid {
+    grid-template-columns: 1fr;
+    margin-bottom: 3rem;
+  }
+  .storyPageLink h3 {
+    font-size: 2rem;
+  }
+  .storyPageLink h3::after {
+    left: 15rem;
+  }
 }

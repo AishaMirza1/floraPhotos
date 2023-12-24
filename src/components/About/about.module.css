@@ -61,6 +61,10 @@
   .about img {
     margin: 0 auto;
   }
+  .about img {
+    width: 25rem;
+    height: 25rem;
+  }
 }
 @media screen and (max-width: 712px) {
   .about h3::after {
@@ -82,5 +86,9 @@
     letter-spacing: 1.1px;
     line-height: 20px;
     margin-bottom: 1.8rem;
+  }
+  .about img {
+    width: 21rem;
+    height: 21rem;
   }
 }

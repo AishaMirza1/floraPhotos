@@ -1,5 +1,5 @@
-import styles from "./contact.module.css";
 import utilClasses from "../../assets/utilstyles/utilClasses.module.css";
+import styles from "./contact.module.css";
 import OnScrollRevealAnimation from "../../assets/utilstyles/OnScrollRevealAnimation";
 export default function Contact() {
   return (
