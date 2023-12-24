@@ -2,7 +2,6 @@ import styles from "./gallary.module.css";
 import { Link } from "react-router-dom";
 import utilClasses from "../../assets/utilstyles/utilClasses.module.css";
 import Story from "./Story";
-
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import { storyData } from "../../storyData";
 import FullScreen from "../fullScreen/FullScreen";

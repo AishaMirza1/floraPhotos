@@ -23,6 +23,6 @@ export default function FullScreen({ setFullScreen, selectedImgId }) {
   );
 }
 FullScreen.propTypes = {
-  setFullScreen: PropTypes.func.isRequired,
-  selectedImgId: PropTypes.string.isRequired,
+  setFullScreen: PropTypes.func,
+  selectedImgId: PropTypes.string,
 };

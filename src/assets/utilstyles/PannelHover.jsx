@@ -2,7 +2,7 @@ import { motion, useAnimation } from "framer-motion";
 import styles from "./utilClasses.module.css";
 import { useEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
-export default function PannenHover({ isStory }) {
+export default function PannenHover({ isStory, isIndividualStoryPage }) {
   const ref = useRef(null);
 
   const mainControls = useAnimation();
@@ -16,7 +16,7 @@ export default function PannenHover({ isStory }) {
     <motion.span
       ref={ref}
       className={
-        isStory
+        isStory || isIndividualStoryPage
           ? `${styles.pannelHover} ${styles.storyPannelColor}`
           : `${styles.pannelHover} ${styles.homePannelColor}`
       }
@@ -33,4 +33,5 @@ export default function PannenHover({ isStory }) {
 }
 PannenHover.propTypes = {
   isStory: PropTypes.bool,
+  isIndividualStoryPage: PropTypes.bool,
 };
