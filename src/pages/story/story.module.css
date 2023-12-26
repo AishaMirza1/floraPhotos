@@ -1,3 +1,7 @@
+.story {
+  overflow-x: hidden;
+}
+
 .storyData div:nth-child(1) {
   margin: 2rem 5rem;
   overflow-x: hidden;
@@ -38,8 +42,8 @@
   left: 13rem;
 }
 .story img {
-  width: 116%;
-  height: 70vh;
+  width: 100vw;
+  height: 400px;
   object-fit: cover;
   margin-bottom: 2rem;
 }
@@ -54,4 +58,38 @@
   font-size: 3.2rem;
   font-weight: bold;
   letter-spacing: 1px;
+}
+@media screen and (max-width: 882px) {
+  .storyData div:nth-child(1) {
+    margin: 2rem 3rem;
+  }
+  .storyData h3 {
+    font-size: 2rem;
+  }
+  .storyData h3::after {
+    left: 11rem;
+  }
+  .story1_story_2 p {
+    font-size: 1.8rem;
+  }
+  .heading3 {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 433px) {
+  .storyData div:nth-child(1) {
+    display: none;
+  }
+  .storyData h3 {
+    font-size: 2rem;
+  }
+  .storyData h3::after {
+    left: 11rem;
+  }
+  .story1_story_2 p {
+    font-size: 1.8rem;
+  }
+  .heading3 {
+    font-size: 3rem;
+  }
 }

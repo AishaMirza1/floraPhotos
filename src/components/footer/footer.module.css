@@ -2,6 +2,7 @@
   border-top: 2px solid rgba(19, 19, 19, 0.91);
   padding: 5rem 0;
   height: 16rem;
+  overflow-x: hidden;
 }
 .footer ul li h3 {
   font-size: 2.4rem;

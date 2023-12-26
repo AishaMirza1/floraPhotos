@@ -29,18 +29,12 @@ export default function Header({ headerName }) {
       {isIndividualStoryPage && (
         <p className={styles.storyName}>{storyData[id - 1].storyName}</p>
       )}
-      {/* {characters.map((character) => (
-        <div className={styles.pannelHover} key={character}>
-          <PannenHover isStory={isStoryPage} />
-          <p>{character}</p>
-        </div>
-      ))} */}
       <div className={styles.pannelHover}>
         <PannenHover
           isStory={isStoryPage}
           isIndividualStoryPage={isIndividualStoryPage}
         />
-        <p>{characters[0]}</p>
+        <p className={styles.headerParagraph}>{characters[0]}</p>
       </div>
       <div className={styles.pannelHover}>
         <PannenHover

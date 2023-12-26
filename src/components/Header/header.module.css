@@ -28,6 +28,7 @@
 .homeBackGround img {
   height: 100vh;
   overflow: hidden;
+  object-fit: cover;
 }
 .homeBackGround p {
   color: #fff;
@@ -42,7 +43,7 @@
 
 .storyName {
   text-align: center;
-  font-size: 22rem;
+  font-size: 20rem;
   letter-spacing: 2rem;
   position: absolute;
   top: 50%;
@@ -56,38 +57,63 @@
   }
 }
 @media screen and (max-width: 860px) {
-  .header p {
-    font-size: 7rem;
+  .header p:nth-child(2) {
+    font-size: 8rem;
+  }
+  .storyName {
+    font-size: 14rem;
   }
   .header div {
     height: 100%;
+  }
+}
+@media screen and (max-width: 732px) {
+  .storyName {
+    font-size: 10rem;
+  }
+}
+@media screen and (max-width: 566px) {
+  .storyName {
+    font-size: 8rem;
   }
 }
 @media screen and (max-width: 541px) {
-  .header p {
-    font-size: 5rem;
-  }
   .header div {
     height: 100%;
   }
-}
-@media screen and (max-width: 502px) {
-  .header p {
+  .storyName {
     font-size: 6rem;
   }
 }
-@media screen and (max-width: 321px) {
-  .header p {
+@media screen and (max-width: 595px) {
+  .storyName {
+    padding: 0 3rem;
+  }
+}
+@media screen and (max-width: 502px) {
+  .header p:nth-child(2) {
+    font-size: 7rem;
+  }
+}
+@media screen and (max-width: 410px) {
+  .storyName {
     font-size: 5rem;
   }
 }
-@media screen and (max-width: 332px) {
-  .header p {
-    font-size: 4rem;
+@media screen and (max-width: 360px) {
+  .storyName {
+    font-size: 3rem;
+  }
+  .header p:nth-child(2) {
+    font-size: 5rem;
   }
 }
+
 @media screen and (max-width: 280px) {
-  .header p {
+  .storyName {
+    font-size: 2rem;
+  }
+  .header p:nth-child(2) {
     font-size: 3rem;
   }
 }
