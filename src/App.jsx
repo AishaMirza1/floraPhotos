@@ -4,7 +4,7 @@ import Footer from "./components/footer/Footer.jsx";
 // import Navbar from "./components/navbar/Navbar.jsx";
 import Home from "./pages/Home";
 import Stories from "./pages/Stories";
-import Story from "./pages/Story";
+import Story from "./pages/story/Story";
 import { Routes, Route, HashRouter } from "react-router-dom";
 function App() {
   return (

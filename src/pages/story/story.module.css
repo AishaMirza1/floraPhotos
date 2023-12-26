@@ -1,0 +1,57 @@
+.storyData div:nth-child(1) {
+  margin: 2rem 5rem;
+  overflow-x: hidden;
+}
+.storyHeaderDateContainer {
+  text-align: center;
+}
+.story1_story_2 {
+  margin: 0 6%;
+}
+.storyData h2 {
+  margin: 17rem 0 6rem 0;
+}
+.storyHeaderDateContainer p {
+  font-size: 2rem;
+  font-weight: 400;
+}
+.storyData h3 {
+  font-size: 2.4rem;
+  position: relative;
+  transition: 0.6s;
+  transform: translateX(6rem);
+}
+.storyData h3::after,
+.storyData h3::before {
+  content: " ";
+  height: 2.5px;
+  width: 120rem;
+  background: #000;
+  display: block;
+  position: absolute;
+  top: 50%;
+}
+.storyData h3::before {
+  left: -120.5rem;
+}
+.storyData h3::after {
+  left: 13rem;
+}
+.story img {
+  width: 116%;
+  height: 70vh;
+  object-fit: cover;
+  margin-bottom: 2rem;
+}
+.story1_story_2 p {
+  margin: 4rem 0;
+  font-size: 2.4rem;
+  font-family: sans-serif;
+  letter-spacing: 1.7px;
+  line-height: 3rem;
+}
+.heading3 {
+  font-size: 3.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}

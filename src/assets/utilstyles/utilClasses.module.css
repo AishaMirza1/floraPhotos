@@ -25,8 +25,7 @@
   left: -35.5%;
 }
 
-.lineHoverAnimation:hover h3,
-.storyData:hover h3 {
+.lineHoverAnimation:hover h3 {
   transform: translateX(30%);
 }
 .heading2 {
@@ -69,42 +68,7 @@
 .storyPannelColor {
   background-color: #00000087;
 }
-.storyData div:nth-child(1) {
-  margin: 2rem 5rem;
-  overflow-x: hidden;
-}
-.storyHeaderDateContainer {
-  text-align: center;
-}
-.storyData h2 {
-  margin: 17rem 0 6rem 0;
-}
-.storyData p {
-  font-size: 2rem;
-  font-weight: 400;
-}
-.storyData h3 {
-  font-size: 2.4rem;
-  position: relative;
-  transition: 0.6s;
-  transform: translateX(6rem);
-}
-.storyData h3::after,
-.storyData h3::before {
-  content: " ";
-  height: 2.5px;
-  width: 120rem;
-  background: #000;
-  display: block;
-  position: absolute;
-  top: 50%;
-}
-.storyData h3::before {
-  left: -120.5rem;
-}
-.storyData h3::after {
-  left: 13rem;
-}
+
 @media screen and (max-width: 1400px) {
   .heading2 {
     font-size: 5.7rem;

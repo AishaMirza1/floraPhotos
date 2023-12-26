@@ -10,8 +10,10 @@ export default function Header({ headerName }) {
   const isIndividualStoryPage = headerName === "" ? true : false;
   const imgsrc = isIndividualStoryPage
     ? `${storyData[id - 1].src}`
+    : isStoryPage
+    ? ""
     : "https://www.pixel4k.com/wp-content/uploads/2018/10/starry-night-sky-evening-blue-landscape-4k_1540144784.jpg";
-  console.log(imgsrc);
+
   return (
     <div
       className={
@@ -24,7 +26,7 @@ export default function Header({ headerName }) {
       }}
     >
       {" "}
-      {(isIndividualStoryPage || isStoryPage) && (
+      {isIndividualStoryPage && (
         <p className={styles.storyName}>{storyData[id - 1].storyName}</p>
       )}
       {/* {characters.map((character) => (

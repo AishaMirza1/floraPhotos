@@ -7,7 +7,7 @@
   overflow-x: hidden;
 }
 .header div {
-  height: 100%;
+  overflow-y: hidden;
   border-right: 1px solid;
   display: flex;
   justify-content: center;
@@ -25,17 +25,21 @@
 .homeBackGround {
   height: 100vh;
 }
+.homeBackGround img {
+  height: 100vh;
+  overflow: hidden;
+}
 .homeBackGround p {
   color: #fff;
 }
 .storyBackGround {
   height: 70vh;
   background-image: none;
-}
-.storyBackGround p {
   color: #000;
   background-color: #fff;
+  border-bottom: 2px solid #000;
 }
+
 .storyName {
   text-align: center;
   font-size: 22rem;
@@ -46,18 +50,22 @@
   transform: translate(-50%, -50%);
 }
 
-@media screen and (max-width: 541px) {
+@media screen and (max-width: 1025px) {
+  .storyName {
+    font-size: 18rem;
+  }
+}
+@media screen and (max-width: 860px) {
   .header p {
-    font-size: 5rem;
+    font-size: 7rem;
   }
   .header div {
     height: 100%;
   }
 }
-
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 541px) {
   .header p {
-    font-size: 7rem;
+    font-size: 5rem;
   }
   .header div {
     height: 100%;
