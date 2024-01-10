@@ -1,65 +1,63 @@
-import { HashLink } from "react-router-hash-link";
 import styles from "./navbar.module.css";
-import { useState } from "react";
 import utilClasses from "../../assets/utilstyles/utilClasses.module.css";
+import { data } from "./data";
+
+import { HashLink } from "react-router-hash-link";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
+
 export default function Navbar() {
   const [showMobileNav, setMobileNav] = useState(false);
   return (
-    <nav className={styles.nav}>
-      <div className={styles.fadeBack}>
-        <Link to="/">
-          <h1>Flora</h1>
-        </Link>
-      </div>
-      <div className={styles.fadeBack}>
-        <button onClick={() => setMobileNav(!showMobileNav)}>
-          <span></span>
-        </button>
-        <AnimatePresence>
-          <motion.div
-            variants={{
-              hidden: { clipPath: "circle(2% at 96.3% 14%)" },
-              visible: { clipPath: "circle(100%)" },
-            }}
-            transition={{ duration: 0.5 }}
-            animate={showMobileNav ? "visible" : "hidden"}
-            className={styles.navContainer}
-            exit={{ clipPath: "circle(2% at -96.3% -5.9%)" }}
-          >
-            {showMobileNav && (
-              <ul>
-                <li className={utilClasses.lineHoverAnimation}>
-                  <HashLink to="/#gallary">
-                    <h3 className={utilClasses.line}>gallary</h3>
-                  </HashLink>
-                </li>
-                <li className={utilClasses.lineHoverAnimation}>
-                  <HashLink to="/#story">
-                    <h3 className={utilClasses.line}>Stories</h3>
-                  </HashLink>
-                </li>
-                <li className={utilClasses.lineHoverAnimation}>
-                  <HashLink to="/#aboutme">
-                    <h3 className={utilClasses.line}>About me</h3>
-                  </HashLink>
-                </li>
-                <li className={utilClasses.lineHoverAnimation}>
-                  <HashLink to="/#gear">
-                    <h3 className={utilClasses.line}>gear</h3>
-                  </HashLink>
-                </li>
-                <li className={utilClasses.lineHoverAnimation}>
-                  <HashLink to="/#contact">
-                    <h3 className={utilClasses.line}>contact</h3>
-                  </HashLink>
-                </li>
-              </ul>
-            )}
-          </motion.div>
-        </AnimatePresence>
-      </div>
-    </nav>
+    <>
+      <nav className={styles.header}>
+        <div className={styles.headerLogoContainer}>
+          <Link to="/">
+            <h1>Flora</h1>
+          </Link>
+          <div className={styles.fadeBack}></div>
+        </div>
+        <div className={styles.NavContainer}>
+          <div className={styles.fadeBackbtn}></div>
+          <button onClick={() => setMobileNav(!showMobileNav)}>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+      <AnimatePresence>
+        <motion.div
+          variants={{
+            hidden: { clipPath: "circle(2% at 96.3% 14%)", opacity: 0 },
+            visible: { clipPath: "circle(100%)", opacity: 1 },
+          }}
+          transition={{
+            duration: 0.75,
+            ease: [0.76, 0, 0.24, 1],
+          }}
+          animate={showMobileNav ? "visible" : "hidden"}
+          className={styles.navContainerInner}
+          exit={{ clipPath: "circle(2% at -96.3% -5.9%)" }}
+        >
+          <AnimatePresence>{showMobileNav && <Nav />}</AnimatePresence>
+        </motion.div>
+      </AnimatePresence>
+    </>
+  );
+}
+
+function Nav() {
+  return (
+    <ul>
+      {data.map((data, i) => {
+        return (
+          <li className={utilClasses.lineHoverAnimation} key={i}>
+            <HashLink to={data.linkTo}>
+              <h3 className={utilClasses.line}>{data.title}</h3>
+            </HashLink>
+          </li>
+        );
+      })}
+    </ul>
   );
 }

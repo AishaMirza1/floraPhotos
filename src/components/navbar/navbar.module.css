@@ -1,44 +1,62 @@
-.nav {
+.header {
   width: 100vw;
-  min-width: 120rem;
   height: 8rem;
   display: flex;
   justify-content: space-between;
-  padding: 2rem 4rem;
+  padding: 2rem 8rem;
   color: #000;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 99;
 }
-.fadeBack {
-  border-radius: 100%;
-  height: 35px;
-  width: 35px;
-  background-color: #fff;
-  box-shadow: 0px 0px 20px 20px #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+.headerLogoContainer,
+.NavContainer {
+  position: relative;
 }
-.nav h1 {
+
+.header h1 {
+  position: absolute;
   font-size: 2rem;
   font-weight: bold;
   z-index: 3;
+  color: #000;
 }
-.nav button {
-  background-color: #fff;
+.fadeBack,
+.fadeBackbtn {
+  position: absolute;
   border-radius: 100%;
+  height: 55px;
+  width: 55px;
+  background-color: #ffffff;
+  filter: blur(8px);
+  z-index: 0;
+}
+.fadeBackbtn {
+  height: 40px;
+  width: 40px;
+}
+.header h1,
+.fadeBack,
+.fadeBackbtn {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.NavContainer button {
   width: 3.4rem;
   height: 3.4rem;
-  border: 2px solid #000;
+  border: 2.7px solid #000;
   cursor: pointer;
-  z-index: 5;
+  z-index: 99;
+  position: relative;
 }
-.nav button span {
-  display: block;
-  background-color: #fff;
+.NavContainer button,
+.NavContainer button span {
+  background-color: transparent;
   border-radius: 100%;
+}
+.NavContainer button span {
+  display: block;
   width: 2rem;
   height: 2rem;
   border: 2px solid #000;
@@ -49,23 +67,20 @@
   width: 1.4rem;
   height: 1.4rem;
 }
-
-.navContainer {
+.navContainerInner {
+  background-color: rgb(255, 255, 255);
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -2;
-  width: 100vw;
-  background-color: #fff;
-  padding: 18rem 6rem 8rem 6rem;
+  padding: 12rem 4rem;
+  z-index: 9;
+  width: 100%;
+  height: fit-content;
 }
-
-.navContainer ul {
+.navContainerInner ul {
   max-width: 720rem;
   overflow: hidden;
 }
-.navContainer ul li h3 {
-  font-size: 3.4rem;
+.navContainerInner ul li h3 {
+  font-size: 2.8rem;
   font-weight: 400;
   letter-spacing: 1.7px;
   text-transform: capitalize;
@@ -76,13 +91,13 @@
   transition: 0.4s;
 }
 
-.navContainer ul li:nth-child(3) h3::after {
+.navContainerInner ul li:nth-child(3) h3::after {
   left: 13%;
 }
-.navContainer ul li:nth-child(4) h3::after {
+.navContainerInner ul li:nth-child(4) h3::after {
   left: 7%;
 }
-.navContainer ul li:nth-child(5) h3::after {
+.navContainerInner ul li:nth-child(5) h3::after {
   left: 12%;
 }
 
